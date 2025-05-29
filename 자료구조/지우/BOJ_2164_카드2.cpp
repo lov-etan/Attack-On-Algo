@@ -9,7 +9,7 @@ int main() {
     cin.tie(NULL);
     ios::sync_with_stdio(false);
     
-    int N; int answer = 1; // 1일 때는 while에 들어가지 못한다..!!!
+    int N;
     cin >> N;
 
     queue<int> q;
@@ -18,15 +18,14 @@ int main() {
         q.push(i);
     }
 
-    while(q.size() > 1) {         
+    while(q.size() > 1) { 
         q.pop(); // 제일 위에 걸 버린다
 
         int num = q.front(); // 그 다음, 제일 위에 있는 카드를 제일 아래로 옮긴다.
         q.pop();
         q.push(num);
-        
-        answer = q.front(); //현재 남아있는 수 확인
+
     }
 
-    cout << answer;
+    cout << q.front();
 }
