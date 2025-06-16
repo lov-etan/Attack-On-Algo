@@ -57,7 +57,7 @@ int main() {
                         }
                     }
 
-                result[r][c] = bombCnt;
+                    result[r][c] = bombCnt;
                 }
                 
             }
